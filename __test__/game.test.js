@@ -2,7 +2,7 @@ const Game = require('../src/game').default
 const fs = require('fs')
 
 describe('App', () => {
-  it('App Contains the compiled JavaScript', (done) => {
+  it('Contains the compiled JavaScript', (done) => {
     fs.readFile('./public/main.js', 'utf8', (err, data) => {
       expect(err).toBe(null)
       expect(data).toMatchSnapshot()
